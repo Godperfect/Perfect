@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="canvas"></canvas>
+    <div id="countdown">Wait: 5</div>
+    <div id="hero">
+      <h1>Welcome <br> To my portfolio</h1>
+    </div>
+  </div>
+  <script>
+    let countdownElement = document.getElementById("countdown");
+    let countdown = 5; // Initial countdown value
+
+    // Start the countdown
+    let timer = setInterval(() => {
+      countdown--; // Decrement the countdown
+      countdownElement.textContent = `Wait : ${countdown}`; // Update the displayed text
+
+      if (countdown <= 0) {
+        clearInterval(timer); // Stop the countdown
+        window.location.href = "page2.html"; // Redirect to page2.html
+      }
+    }, 1000); // Run every second
+  </script>
+  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
